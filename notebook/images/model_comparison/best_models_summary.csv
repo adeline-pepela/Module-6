@@ -1,0 +1,5 @@
+Criterion,Best Model,Score
+AUC,Ensemble Model,0.5853889943074004
+Sensitivity,Naive Bayes,1.0
+Specificity,KNN,1.0
+Balanced Accuracy,Decision Tree,0.5580271404749584
