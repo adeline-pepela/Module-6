@@ -3,8 +3,8 @@
 ## 🎉 Successfully Pushed to GitHub!
 
 **Repository:** https://github.com/adeline-pepela/Module-5.git  
-**Branch:** obote  
-**Date:** March 9, 2024  
+**Branch:** main  
+**Date:** March 9, 2025  
 **Status:** Production Ready
 
 ---
