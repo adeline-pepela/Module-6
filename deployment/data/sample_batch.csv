@@ -1,0 +1,11 @@
+PID,CRM_PID_Value_Segment,EffectiveSegment,Billing_ZIP,KA_name,Active_subscribers,Not_Active_subscribers,Suspended_subscribers,Total_Subscribers,Average_Mobile_Revenue,Average_Fix_Revenue,ARPU
+123094038,Silver,SOHO,6100,AD?,13,,,13,182.17,0.0,14.01
+160106532,Silver,SOHO,4000,Ginka Vachkova,4,1.0,,5,172.5,0.0,43.13
+160041668,Bronze,SOHO,4002,Ginka Vachkova,3,2.0,,5,79.67,0.0,26.56
+112048979,Bronze,SOHO,4600,MT,2,,,2,101.33,0.0,50.67
+160083457,Bronze,SOHO,4015,Ginka Vachkova,5,,,5,143.33,0.0,28.67
+825066215,Gold,VSE,4210,Ginka Vachkova,5,,,5,186.0,0.0,37.2
+115090638,Bronze,SOHO,4000,VT,5,2.0,,7,42.0,0.0,8.4
+126034174,Bronze,SOHO,6490,RJ,2,1.0,,3,50.17,0.0,25.09
+892161,Bronze,SOHO,6450,VM,4,1.0,,5,75.17,0.0,18.79
+115654875,Gold,VSE,4024,Daniela Stefanova,12,,,12,187.5,0.0,15.63

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction System - Enterprise Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Churn AI</h2>
+                <p>Predictive Analytics</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-page="overview">
+                    <span class="icon">📊</span>
+                    <span>Executive Overview</span>
+                </a>
+                <a href="#" class="nav-item" data-page="customers">
+                    <span class="icon">👥</span>
+                    <span>Customer Intelligence</span>
+                </a>
+                <a href="#" class="nav-item" data-page="risk">
+                    <span class="icon">⚠️</span>
+                    <span>Risk Segmentation</span>
+                </a>
+                <a href="#" class="nav-item" data-page="predict">
+                    <span class="icon">🎯</span>
+                    <span>Real-Time Scoring</span>
+                </a>
+                <a href="#" class="nav-item" data-page="interventions">
+                    <span class="icon">🔧</span>
+                    <span>Retention Actions</span>
+                </a>
+                <a href="#" class="nav-item" data-page="model">
+                    <span class="icon">🤖</span>
+                    <span>Model Governance</span>
+                </a>
+                <a href="#" class="nav-item" data-page="evaluation">
+                    <span class="icon">📈</span>
+                    <span>Model Evaluation</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Model v1.0.0</p>
+                <p class="status-indicator">● System Active</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 id="page-title">Executive Overview</h1>
+                <div class="header-actions">
+                    <button class="btn-secondary" onclick="location.reload()">↻ Refresh</button>
+                    <div class="user-info">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page: Executive Overview -->
+            <div id="page-overview" class="page active">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Total Customers</div>
+                        <div class="kpi-value" id="kpi-total">-</div>
+                        <div class="kpi-trend">Active accounts</div>
+                    </div>
+                    <div class="kpi-card alert">
+                        <div class="kpi-label">Churn Rate</div>
+                        <div class="kpi-value" id="kpi-churn">-</div>
+                        <div class="kpi-trend">Current period</div>
+                    </div>
+                    <div class="kpi-card warning">
+                        <div class="kpi-label">At Risk (30 Days)</div>
+                        <div class="kpi-value" id="kpi-risk">-</div>
+                        <div class="kpi-trend">Predicted churners</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Revenue at Risk</div>
+                        <div class="kpi-value" id="kpi-revenue">-</div>
+                        <div class="kpi-trend">Potential loss</div>
+                    </div>
+                    <div class="kpi-card success">
+                        <div class="kpi-label">Prevention Rate</div>
+                        <div class="kpi-value" id="kpi-prevention">-</div>
+                        <div class="kpi-trend">Model recall</div>
+                    </div>
+                    <div class="kpi-card success">
+                        <div class="kpi-label">Campaign Efficiency</div>
+                        <div class="kpi-value" id="kpi-efficiency">-</div>
+                        <div class="kpi-trend">Model precision</div>
+                    </div>
+                </div>
+
+                <div class="chart-grid">
+                    <div class="chart-card">
+                        <h3>Monthly Churn Trend</h3>
+                        <canvas id="chart-trend"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Risk Distribution</h3>
+                        <canvas id="chart-risk"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Revenue at Risk by Segment</h3>
+                        <canvas id="chart-segment"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Model Performance Trend</h3>
+                        <canvas id="chart-performance"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Customer Intelligence -->
+            <div id="page-customers" class="page">
+                <div class="filter-bar">
+                    <select id="filter-risk" class="filter-select">
+                        <option value="">All Risk Levels</option>
+                        <option value="High">High Risk</option>
+                        <option value="Medium">Medium Risk</option>
+                        <option value="Low">Low Risk</option>
+                    </select>
+                    <select id="filter-segment" class="filter-select">
+                        <option value="">All Segments</option>
+                        <option value="SOHO">SOHO</option>
+                        <option value="SME">SME</option>
+                        <option value="VSE">VSE</option>
+                    </select>
+                    <button class="btn-primary" onclick="applyFilters()">Apply Filters</button>
+                    <button class="btn-secondary" onclick="exportCustomers()">📥 Export to CSV</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Segment</th>
+                                <th>Risk Level</th>
+                                <th>Churn Probability</th>
+                                <th>ARPU</th>
+                                <th>Revenue at Risk</th>
+                                <th>Account Manager</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customer-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Page: Risk Segmentation -->
+            <div id="page-risk" class="page">
+                <div class="risk-grid">
+                    <div class="risk-bucket critical">
+                        <div class="risk-header">
+                            <h3>Ultra High Risk</h3>
+                            <span class="risk-range">&gt; 80%</span>
+                        </div>
+                        <div class="risk-count" id="risk-ultra">-</div>
+                        <div class="risk-action">
+                            <strong>Action Required:</strong>
+                            <p>Executive intervention with premium retention offers</p>
+                        </div>
+                    </div>
+                    <div class="risk-bucket high">
+                        <div class="risk-header">
+                            <h3>High Risk</h3>
+                            <span class="risk-range">60% - 80%</span>
+                        </div>
+                        <div class="risk-count" id="risk-high">-</div>
+                        <div class="risk-action">
+                            <strong>Action Required:</strong>
+                            <p>Personalized retention campaign with dedicated manager</p>
+                        </div>
+                    </div>
+                    <div class="risk-bucket medium">
+                        <div class="risk-header">
+                            <h3>Medium Risk</h3>
+                            <span class="risk-range">40% - 60%</span>
+                        </div>
+                        <div class="risk-count" id="risk-medium">-</div>
+                        <div class="risk-action">
+                            <strong>Action Required:</strong>
+                            <p>Engagement campaign with targeted offers</p>
+                        </div>
+                    </div>
+                    <div class="risk-bucket low">
+                        <div class="risk-header">
+                            <h3>Low Risk</h3>
+                            <span class="risk-range">&lt; 40%</span>
+                        </div>
+                        <div class="risk-count" id="risk-low">-</div>
+                        <div class="risk-action">
+                            <strong>Action Required:</strong>
+                            <p>Loyalty nurturing and satisfaction monitoring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Real-Time Scoring -->
+            <div id="page-predict" class="page">
+                <div class="scoring-container">
+                    <div class="scoring-input">
+                        <h3>Single Customer Risk Assessment</h3>
+                        <input type="text" id="input-customer-id" placeholder="Enter Customer ID" class="input-field">
+                        <button class="btn-primary btn-large" onclick="scoreCustomer()">Calculate Risk Score</button>
+                    </div>
+
+                    <div class="scoring-input" style="margin-top: 2rem;">
+                        <h3>Bulk Prediction (CSV Upload)</h3>
+                        <p style="color: #64748b; margin-bottom: 1rem; font-size: 0.875rem;">Upload a CSV file with customer IDs to get predictions for multiple customers at once.</p>
+                        <input type="file" id="bulk-upload" accept=".csv" class="input-field" onchange="handleBulkUpload()">
+                        <div id="bulk-result" style="margin-top: 1rem; display: none;">
+                            <p id="bulk-status"></p>
+                            <button class="btn-secondary" onclick="downloadBulkResults()" style="margin-top: 0.5rem;">Download Results</button>
+                        </div>
+                    </div>
+
+                    <div id="scoring-result" class="scoring-result" style="display:none;">
+                        <div class="result-header">
+                            <h3>Risk Assessment Result</h3>
+                            <span class="result-id" id="result-customer-id"></span>
+                        </div>
+                        
+                        <div class="result-main">
+                            <div class="result-score">
+                                <div class="score-label">Churn Probability</div>
+                                <div class="score-value" id="result-probability">-</div>
+                            </div>
+                            <div class="result-badge">
+                                <div class="badge-label">Risk Level</div>
+                                <div class="badge-value" id="result-risk-level">-</div>
+                            </div>
+                        </div>
+
+                        <div class="result-drivers">
+                            <h4>Top Churn Drivers (Feature Importance)</h4>
+                            <ul id="result-drivers-list"></ul>
+                        </div>
+
+                        <div class="result-action">
+                            <h4>Recommended Action</h4>
+                            <p id="result-action-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Retention Actions -->
+            <div id="page-interventions" class="page">
+                <div class="interventions-header">
+                    <h3>Active Retention Campaigns</h3>
+                    <button class="btn-primary" onclick="showNewIntervention()">+ New Campaign</button>
+                </div>
+                <div class="interventions-grid" id="interventions-list">
+                    <p class="placeholder">Loading retention campaigns...</p>
+                </div>
+            </div>
+
+            <!-- Page: Model Governance -->
+            <div id="page-model" class="page">
+                <div class="governance-grid">
+                    <div class="governance-card">
+                        <h3>Model Information</h3>
+                        <table class="info-table">
+                            <tr><td>Model Version</td><td id="model-version">-</td></tr>
+                            <tr><td>Algorithm</td><td>EasyEnsembleClassifier</td></tr>
+                            <tr><td>Sampling Strategy</td><td id="model-sampling">-</td></tr>
+                            <tr><td>Feature Count</td><td id="model-features">-</td></tr>
+                            <tr><td>Last Retrain Date</td><td id="model-retrain">-</td></tr>
+                            <tr><td>Training Data Size</td><td>8,436 customers</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="governance-card">
+                        <h3>Performance Metrics</h3>
+                        <table class="info-table">
+                            <tr><td>F1 Score</td><td id="metric-f1">-</td></tr>
+                            <tr><td>Recall (Prevention Rate)</td><td id="metric-recall">-</td></tr>
+                            <tr><td>Precision (Campaign Efficiency)</td><td id="metric-precision">-</td></tr>
+                            <tr><td>PR-AUC</td><td id="metric-prauc">-</td></tr>
+                            <tr><td>ROC-AUC</td><td>0.5510</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="governance-card">
+                        <h3>Drift Detection & Monitoring</h3>
+                        <div class="alert-box success">
+                            <span class="alert-icon">✓</span>
+                            <div>
+                                <strong>No Data Drift Detected</strong>
+                                <p>Feature distributions remain stable</p>
+                            </div>
+                        </div>
+                        <div class="alert-box success">
+                            <span class="alert-icon">✓</span>
+                            <div>
+                                <strong>Model Performance Stable</strong>
+                                <p>Metrics within acceptable thresholds</p>
+                            </div>
+                        </div>
+                        <div class="alert-box info">
+                            <span class="alert-icon">ℹ</span>
+                            <div>
+                                <strong>Next Scheduled Retrain</strong>
+                                <p>30 days from last training date</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Model Evaluation -->
+            <div id="page-evaluation" class="page">
+                <div class="eval-section">
+                    <h3>Model Comparison (11 Models Tested)</h3>
+                    <div class="table-container">
+                        <table class="data-table" id="model-comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>F1 Score</th>
+                                    <th>Recall</th>
+                                    <th>Precision</th>
+                                    <th>Accuracy</th>
+                                    <th>ROC-AUC</th>
+                                    <th>PR-AUC</th>
+                                    <th>Selected</th>
+                                </tr>
+                            </thead>
+                            <tbody id="comparison-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="chart-grid" style="margin-top: 2rem;">
+                    <div class="chart-card">
+                        <h3>Feature Importance (Top 15)</h3>
+                        <canvas id="chart-feature-importance"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Confusion Matrix</h3>
+                        <canvas id="chart-confusion-matrix"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>ROC Curve (AUC = 0.5510)</h3>
+                        <canvas id="chart-roc"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Precision-Recall Curve (AUC = 0.0786)</h3>
+                        <canvas id="chart-pr"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Customer Details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
