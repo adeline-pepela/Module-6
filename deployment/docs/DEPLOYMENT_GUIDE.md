@@ -1,16 +1,16 @@
 # Churn Prediction System - Deployment Guide
 
-## System Status: ✅ READY FOR DISSERTATION
+## System Status:  READY FOR DISSERTATION
 
 ### What's Complete
 
-✅ **Backend API** - FastAPI with 7 functional endpoints  
-✅ **Database** - SQLite with 8,436 real customers  
-✅ **Predictions** - 8,436 predictions generated  
-✅ **Model Evaluation** - 11 models compared with real metrics  
-✅ **Feature Importance** - 22 features with real permutation scores  
-✅ **Frontend** - 7 pages with interactive charts  
-✅ **Bulk Prediction** - CSV template with 10 real customers  
+**Backend API** - FastAPI with 7 functional endpoints  
+**Database** - SQLite with 8,436 real customers  
+**Predictions** - 8,436 predictions generated  
+**Model Evaluation** - 11 models compared with real metrics  
+**Feature Importance** - 22 features with real permutation scores  
+**Frontend** - 7 pages with interactive charts  
+**Bulk Prediction** - CSV template with 10 real customers  
 
 ---
 
@@ -259,10 +259,10 @@ ls -lh ../models/best_model.pkl
 
 **Author**: Adeline Makokha  
 **Adm No**: 191199  
-**Course**: DSA 8502 Predictive and Optimization Analytics
+**Course**: Dissertation
 
 ---
 
 ## License
 
-Academic use only - PhD Dissertation Project
+Academic use only - Dissertation Project
