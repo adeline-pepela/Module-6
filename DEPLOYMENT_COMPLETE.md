@@ -26,7 +26,7 @@
 
 ---
 
-## 📁 Final Structure
+## Final Structure
 
 ```
 Churn-main/
@@ -54,12 +54,12 @@ Churn-main/
 
 ---
 
-## 🚀 One-Command Deployment
+## One-Command Deployment
 
 Anyone can now deploy with:
 
 ```bash
-git clone https://github.com/adeline-pepela/Module-5.git
+git clone https://github.com/adeline-pepela/Module-6.git
 cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deployment"
 ./scripts/deploy.sh
 ```
@@ -69,18 +69,18 @@ cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deploy
 
 ---
 
-## ✅ What's Working
+## What's Working
 
 ### Application
-- ✅ FastAPI backend running
-- ✅ Web dashboard accessible
-- ✅ Database with 8,436 customers
-- ✅ ML model loaded (896KB)
-- ✅ All 15+ API endpoints responding
-- ✅ All 7 pages functional
+- FastAPI backend running
+- Web dashboard accessible
+- Database with 8,436 customers
+- ML model loaded (896KB)
+- All 15+ API endpoints responding
+- All 7 pages functional
 
 ### Docker
-- ✅ Container running (healthy)
+- Container running (healthy)
 - ✅ Memory usage: 144MB
 - ✅ CPU usage: <1%
 - ✅ Auto-initialization working
