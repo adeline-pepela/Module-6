@@ -60,7 +60,7 @@ Anyone can now deploy with:
 
 ```bash
 git clone https://github.com/adeline-pepela/Module-6.git
-cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deployment"
+cd "Module-6/deployment"
 ./scripts/deploy.sh
 ```
 
