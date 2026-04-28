@@ -243,7 +243,7 @@ cd "Module-6/deployment"
 - Scripts tested
 - Structure organized
 
-### Quality: ✅ PRODUCTION READY
+### Quality: PRODUCTION READY
 - Professional structure
 - Industry best practices
 - Comprehensive documentation
@@ -251,7 +251,7 @@ cd "Module-6/deployment"
 - Cross-platform support
 - Well tested
 
-### Dissertation: ✅ READY FOR DEFENSE
+### Dissertation: READY FOR DEFENSE
 - Complete system
 - Real data
 - Working demo
@@ -261,11 +261,11 @@ cd "Module-6/deployment"
 
 ---
 
-## 📞 Repository Information
+## Repository Information
 
 **GitHub URL:**
 ```
-https://github.com/adeline-pepela/Module-5.git
+https://github.com/adeline-pepela/Module-6.git
 ```
 
 **Branch:**
@@ -275,34 +275,21 @@ main
 
 **Clone Command:**
 ```bash
-git clone https://github.com/adeline-pepela/Module-5.git
+git clone https://github.com/adeline-pepela/Module-6.git
 ```
 
 **Quick Deploy:**
 ```bash
-cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deployment"
+cd "Module-6/deployment"
 ./scripts/deploy.sh
 ```
 
----
-
-## 🎉 CONGRATULATIONS!
-
-Your complete churn prediction system is now:
-- ✅ Deployed locally
-- ✅ Pushed to GitHub
-- ✅ Fully documented
-- ✅ Easy to replicate
-- ✅ Production ready
-- ✅ Dissertation ready
-
-**You're all set for your PhD defense!** 🎓
 
 ---
 
 **Author:** Adeline Makokha  
 **Adm No:** 191199  
-**Course:** DSA 8502 Predictive and Optimization Analytics  
+**Course:** Dissertation   
 **Institution:** Strathmore University  
 **Date:** March 9, 2024  
 **Status:** ✅ COMPLETE
