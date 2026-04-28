@@ -1,8 +1,8 @@
-# Access Your Running Docker Application
+# Access  Running Docker Application
 
 ## Container Status: RUNNING
 
-Your Docker container is already running and healthy!
+Docker container is already running and healthy!
 
 ---
 
@@ -25,7 +25,7 @@ http://0.0.0.0:8000
 ## Test the API
 
 ### Using Browser
-Open any of these URLs in your browser:
+Open any of these URLs in  browser:
 
 **Dashboard Metrics:**
 ```
@@ -62,7 +62,7 @@ curl -I http://localhost:8000
 
 ---
 
-## What You'll See
+
 
 ### Dashboard (http://localhost:8000)
 - 6 KPI cards (Total Customers, Churn Rate, etc.)
@@ -91,7 +91,7 @@ curl -I http://localhost:8000
 
 ---
 
-## 🔍 Container Information
+##  Container Information
 
 ### Check Status
 ```bash
@@ -274,7 +274,7 @@ ports:
 
 
 
-Your application is running at:
+Application is running at:
 **http://localhost:8000**
 
 
