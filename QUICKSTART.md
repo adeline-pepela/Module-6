@@ -69,12 +69,12 @@ python -m app.database.save_feature_importance
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-### 6️⃣ Access Dashboard
+### 6️. Access Dashboard
 Open: **http://localhost:8000**
 
 ---
 
-## ✅ Verify Installation
+## Verify Installation
 
 ```bash
 # Check Python version (should be 3.8+)
@@ -92,18 +92,18 @@ curl http://localhost:8000/api/dashboard/metrics
 
 ---
 
-## 📦 What's Included
+##  What's Included
 
-- ✅ Trained ML model (896KB)
-- ✅ 8,436 real customer records
-- ✅ FastAPI backend with 15+ endpoints
-- ✅ Interactive web dashboard (7 pages)
-- ✅ Bulk prediction system
-- ✅ Complete documentation
+-  Trained ML model (896KB)
+-  8,436 real customer records
+-  FastAPI backend with 15+ endpoints
+-  Interactive web dashboard (7 pages)
+-  Bulk prediction system
+-  Complete documentation
 
 ---
 
-## 🆘 Need Help?
+##  Need Help?
 
 See full documentation in:
 - `README.md` - Complete setup guide
@@ -112,7 +112,7 @@ See full documentation in:
 
 ---
 
-## 📊 Expected Results
+## Expected Results
 
 After setup:
 - Total Customers: 8,436
