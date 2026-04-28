@@ -2,12 +2,12 @@
 
 **Author**: Adeline Makokha  
 **Adm No**: 191199  
-**Course**: DSA 8502 Predictive and Optimization Analytics  
+**Course**: Dissertation  
 **Institution**: Strathmore University
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 A complete machine learning system for predicting customer churn in the telecommunication industry. This project includes:
 
@@ -27,7 +27,7 @@ A complete machine learning system for predicting customer churn in the telecomm
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Docker (Recommended - Easiest)
 
@@ -53,7 +53,7 @@ Access: **http://localhost:8000**
 ```bash
 # 1. Clone the repository
 git clone <repository-url>
-cd Churn-main
+cd Module-6
 
 # 2. Create virtual environment
 python -m venv venv
@@ -89,7 +89,7 @@ Open browser: **http://localhost:8000**
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Churn-main/
@@ -134,7 +134,7 @@ Churn-main/
 
 ---
 
-## 🔧 Detailed Setup Instructions
+## Detailed Setup Instructions
 
 ### Step 1: Environment Setup
 
@@ -194,11 +194,11 @@ python -m app.database.save_feature_importance
 ```
 
 **Expected Output:**
-- ✓ Tables created
-- ✓ Loaded 8,436 customers
-- ✓ Generated 8,436 predictions
-- ✓ Saved 11 model comparisons
-- ✓ Saved 22 feature importances
+-  Tables created
+-  Loaded 8,436 customers
+-  Generated 8,436 predictions
+-  Saved 11 model comparisons
+-  Saved 22 feature importances
 
 ### Step 3: Verify Model File
 
@@ -233,7 +233,7 @@ curl http://localhost:8000/api/dashboard/metrics
 
 ---
 
-## 📊 Dashboard Features
+## Dashboard Features
 
 ### 1. Overview Page
 - 6 KPI cards (Total Customers, Churn Rate, At-Risk, Revenue at Risk, Prevention Rate, Campaign Efficiency)
@@ -274,7 +274,7 @@ curl http://localhost:8000/api/dashboard/metrics
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Dashboard
 ```
@@ -308,7 +308,7 @@ GET  /api/evaluation/pr-curve            # PR data
 
 ---
 
-## 📤 Bulk Prediction Format
+## Bulk Prediction Format
 
 ### Required CSV Columns (12)
 ```csv
@@ -327,7 +327,7 @@ See `deployment/bulk_prediction_template.csv` - contains 10 real customers
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Backend Tests
 ```bash
@@ -350,7 +350,7 @@ curl http://localhost:8000/api/evaluation/model-comparison
 
 ---
 
-## 📈 Model Performance
+## Model Performance
 
 ### Selected Model: EasyEnsembleClassifier
 - **Sampling**: SVMSMOTE
@@ -383,7 +383,7 @@ curl http://localhost:8000/api/evaluation/model-comparison
 
 ---
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Database Not Found
 ```bash
@@ -424,7 +424,7 @@ python -c "import sklearn; print(sklearn.__version__)"
 
 ---
 
-## 📚 Research Notebook
+##  Research Notebook
 
 The main research is in `modeling_3.ipynb`:
 - Data exploration & preprocessing
