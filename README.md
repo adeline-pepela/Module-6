@@ -436,7 +436,7 @@ The main research is in `customer_churn.ipynb`:
 
 ---
 
-## 🔐 Security Notes
+## Security Notes
 
 **For Production Deployment:**
 - Add authentication (JWT tokens)
@@ -449,28 +449,17 @@ The main research is in `customer_churn.ipynb`:
 
 ---
 
-## 📝 Citation
 
-```bibtex
-@mastersthesis{makokha2024churn,
-  author  = {Adeline Makokha},
-  title   = {Application of Machine Learning Techniques in Customer Churn Prediction for Telecommunication Industries},
-  school  = {Strathmore University},
-  year    = {2024},
-  type    = {PhD Dissertation},
-  course  = {DSA 8502 Predictive and Optimization Analytics}
-}
-```
 
 ---
 
 ## 📄 License
 
-Academic use only - PhD Dissertation Project
+Academic use only - Dissertation Project
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a dissertation project. For questions or collaboration:
 - **Author**: Adeline Makokha
@@ -479,7 +468,7 @@ This is a dissertation project. For questions or collaboration:
 
 ---
 
-## 📖 Additional Documentation
+## Additional Documentation
 
 - `deployment/DEPLOYMENT_GUIDE.md` - Complete deployment guide
 - `deployment/BULK_PREDICTION_FORMAT.md` - CSV format specification
@@ -488,7 +477,7 @@ This is a dissertation project. For questions or collaboration:
 
 ---
 
-## ✅ Verification Checklist
+## Verification Checklist
 
 After setup, verify:
 - [ ] Virtual environment activated
@@ -506,6 +495,6 @@ After setup, verify:
 
 ---
 
-**System Status**: ✅ Production Ready
+**System Status**: Production Ready
 
-**Last Updated**: March 2026
+**Last Updated**: April 2026
