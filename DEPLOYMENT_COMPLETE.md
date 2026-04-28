@@ -95,15 +95,15 @@ cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deploy
 - Access guide
 
 ### Scripts
-- ✅ deploy.sh (Linux/Mac)
-- ✅ deploy.bat (Windows)
-- ✅ test-docker.sh (validation)
-- ✅ Database setup scripts
-- ✅ Sample data generator
+
+- deploy.bat (Windows)
+- test-docker.sh (validation)
+- Database setup scripts
+- Sample data generator
 
 ---
 
-## 📊 System Metrics
+## System Metrics
 
 | Metric | Value |
 |--------|-------|
@@ -122,11 +122,11 @@ cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deploy
 
 ---
 
-## 🎓 For Dissertation Defense
+## For Dissertation 
 
 ### Key Achievements
-1. ✅ Production-ready ML system
-2. ✅ Complete containerization
+1. Production-ready ML system
+2. Complete containerization
 3. ✅ One-command deployment
 4. ✅ Cross-platform support
 5. ✅ Comprehensive documentation
