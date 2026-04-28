@@ -1,4 +1,4 @@
-# 🐳 Docker Deployment Guide
+# Docker Deployment Guide
 
 ## Quick Start with Docker
 
@@ -17,7 +17,7 @@ Access: **http://localhost:8000**
 
 ---
 
-## 📦 What Gets Built
+## What Gets Built
 
 The Docker container includes:
 - Python 3.11 slim base image
@@ -29,7 +29,7 @@ The Docker container includes:
 
 ---
 
-## 🚀 Deployment Options
+## Deployment Options
 
 ### Option 1: Docker Compose (Recommended)
 
@@ -70,7 +70,7 @@ docker rm churn-prediction
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -99,7 +99,7 @@ ports:
 
 ---
 
-## 📊 Database Persistence
+## Database Persistence
 
 Database is persisted via volume mount:
 ```yaml
@@ -116,7 +116,7 @@ docker-compose up -d
 
 ---
 
-## 🔍 Monitoring
+## Monitoring
 
 ### Health Check
 
@@ -149,7 +149,7 @@ docker stats churn-prediction-app
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Container Won't Start
 
@@ -185,7 +185,7 @@ lsof -ti:8000 | xargs kill -9
 
 ---
 
-## 🔄 Updates & Maintenance
+## Updates & Maintenance
 
 ### Update Application Code
 
@@ -215,7 +215,7 @@ docker-compose up -d
 
 ---
 
-## 🌐 Production Deployment
+## Production Deployment
 
 ### AWS ECS
 
@@ -260,7 +260,7 @@ gcloud run deploy churn-prediction \
 
 ---
 
-## 📈 Scaling
+## Scaling
 
 ### Docker Swarm
 
@@ -319,7 +319,7 @@ kubectl apply -f k8s-deployment.yaml
 
 ---
 
-## 🔐 Security Best Practices
+## Security Best Practices
 
 ### 1. Use Non-Root User
 
@@ -357,7 +357,7 @@ services:
 
 ---
 
-## 📊 Performance Optimization
+## Performance Optimization
 
 ### Multi-Stage Build
 
@@ -391,7 +391,7 @@ services:
 
 ---
 
-## ✅ Verification
+## Verification
 
 After deployment, verify:
 
@@ -413,7 +413,7 @@ docker exec churn-prediction-app ls -lh /app/models/best_model.pkl
 
 ---
 
-## 📝 Docker Commands Cheat Sheet
+## Docker Commands Cheat Sheet
 
 ```bash
 # Build
@@ -443,7 +443,7 @@ docker system prune -a
 
 ---
 
-## 🆘 Support
+## Support
 
 For issues:
 1. Check logs: `docker-compose logs`
