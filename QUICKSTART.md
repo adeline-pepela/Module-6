@@ -1,4 +1,4 @@
-# 🚀 Quick Start Guide
+# Quick Start Guide
 
 ## For Anyone Cloning This Repository
 
@@ -6,8 +6,8 @@
 
 ```bash
 # Clone repository
-git clone https://github.com/adeline-pepela/Module-5.git
-cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deployment"
+git clone https://github.com/adeline-pepela/Module-6.git
+cd "Module-6/deployment"
 
 # Deploy (choose your OS)
 ./scripts/deploy.sh          # Linux/Mac
@@ -27,13 +27,13 @@ scripts\deploy.bat           # Windows
 
 ### Method 2: Manual Setup (Advanced)
 
-### 1️⃣ Clone & Navigate
+### 1️. Clone & Navigate
 ```bash
-git clone https://github.com/adeline-pepela/Module-5.git
-cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main"
+git clone https://github.com/adeline-pepela/Module-6.git
+
 ```
 
-### 2️⃣ Setup Virtual Environment
+### 2️. Setup Virtual Environment
 ```bash
 # Create virtual environment
 python -m venv venv
@@ -44,13 +44,13 @@ source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 ```
 
-### 3️⃣ Install Dependencies
+### 3️. Install Dependencies
 ```bash
 pip install --upgrade pip
 pip install -r deployment/requirements.txt
 ```
 
-### 4️⃣ Setup Database
+### 4️. Setup Database
 ```bash
 cd deployment/backend
 
@@ -64,7 +64,7 @@ python -m app.database.save_model_comparison
 python -m app.database.save_feature_importance
 ```
 
-### 5️⃣ Start Application
+### 5️. Start Application
 ```bash
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
