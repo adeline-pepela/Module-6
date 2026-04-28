@@ -1,6 +1,6 @@
 # DEPLOYMENT COMPLETE - FINAL SUMMARY
 
-## 🎉 Successfully Pushed to GitHub!
+## Successfully Pushed to GitHub!
 
 **Repository:** https://github.com/adeline-pepela/Module-6.git  
 **Branch:** main  
