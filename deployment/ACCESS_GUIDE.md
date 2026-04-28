@@ -1,12 +1,12 @@
-# 🚀 Access Your Running Docker Application
+# Access Your Running Docker Application
 
-## ✅ Container Status: RUNNING
+## Container Status: RUNNING
 
 Your Docker container is already running and healthy!
 
 ---
 
-## 🌐 Access the Application
+## Access the Application
 
 ### Web Dashboard
 Open your browser and go to:
@@ -22,7 +22,7 @@ http://0.0.0.0:8000
 
 ---
 
-## 📊 Test the API
+## Test the API
 
 ### Using Browser
 Open any of these URLs in your browser:
@@ -62,7 +62,7 @@ curl -I http://localhost:8000
 
 ---
 
-## 🎯 What You'll See
+## What You'll See
 
 ### Dashboard (http://localhost:8000)
 - 6 KPI cards (Total Customers, Churn Rate, etc.)
@@ -120,7 +120,7 @@ docker-compose restart
 
 ---
 
-## 📱 Access from Other Devices (Same Network)
+## Access from Other Devices (Same Network)
 
 ### Find Your IP Address
 
@@ -149,7 +149,7 @@ http://192.168.1.100:8000
 
 ---
 
-## 🎨 Features to Try
+## Features to Try
 
 ### 1. Dashboard Overview
 - View all KPIs
@@ -183,7 +183,7 @@ http://192.168.1.100:8000
 
 ---
 
-## 🛠️ Useful Commands
+## Useful Commands
 
 ### Quick Access
 ```bash
@@ -217,7 +217,7 @@ docker inspect churn-prediction-app | grep -A 5 Health
 
 ---
 
-## 📸 Screenshots to Take
+## Screenshots to Take
 
 For your dissertation:
 1. Dashboard overview with all KPIs
@@ -233,7 +233,7 @@ For your dissertation:
 
 ---
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Can't Access http://localhost:8000
 
@@ -272,9 +272,9 @@ ports:
 
 ---
 
-## 🎉 You're All Set!
+
 
 Your application is running at:
 **http://localhost:8000**
 
-Enjoy exploring your churn prediction system! 🚀
+
