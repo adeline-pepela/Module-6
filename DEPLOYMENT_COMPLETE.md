@@ -1,8 +1,8 @@
-# ✅ DEPLOYMENT COMPLETE - FINAL SUMMARY
+# DEPLOYMENT COMPLETE - FINAL SUMMARY
 
 ## 🎉 Successfully Pushed to GitHub!
 
-**Repository:** https://github.com/adeline-pepela/Module-5.git  
+**Repository:** https://github.com/adeline-pepela/Module-6.git  
 **Branch:** main  
 **Date:** March 9, 2025  
 **Status:** Production Ready
