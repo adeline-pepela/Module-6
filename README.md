@@ -426,7 +426,7 @@ python -c "import sklearn; print(sklearn.__version__)"
 
 ##  Research Notebook
 
-The main research is in `modeling_3.ipynb`:
+The main research is in `customer_churn.ipynb`:
 - Data exploration & preprocessing
 - Feature engineering
 - Model training & comparison (11 models)
