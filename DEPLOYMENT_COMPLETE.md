@@ -158,7 +158,7 @@ cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deploy
 
 ---
 
-## 🌐 Access Information
+## Access Information
 
 ### Local Access
 ```
@@ -177,7 +177,7 @@ curl http://localhost:8000/api/dashboard/metrics
 
 ---
 
-## 📚 Documentation Files
+## Documentation Files
 
 1. **README.md** - Main project guide
 2. **QUICKSTART.md** - Fast setup
@@ -194,15 +194,15 @@ curl http://localhost:8000/api/dashboard/metrics
 
 ---
 
-## 🔄 Replication Steps
+## Replication Steps
 
 ### For Reviewers/Examiners
 ```bash
 # 1. Clone
-git clone https://github.com/adeline-pepela/Module-5.git
+git clone https://github.com/adeline-pepela/Module-6.git
 
 # 2. Navigate
-cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deployment"
+cd "Module-6/deployment"
 
 # 3. Deploy
 ./scripts/deploy.sh
@@ -216,13 +216,13 @@ cd "Module-5/Predictive and Optimization Analytics/POA-Project/Churn-main/deploy
 
 ---
 
-## 🎯 Next Steps
+## Next Steps
 
 ### For Presentation
-1. ✅ Take screenshots of all pages
-2. ✅ Record demo video
-3. ✅ Prepare live demo
-4. ✅ Test on fresh machine
+1. Take screenshots of all pages
+2. Record demo video
+3. Prepare live demo
+4. Test on fresh machine
 
 ### For Production (Optional)
 1. ⏳ Deploy to AWS ECS
