@@ -1,4 +1,4 @@
-# 🐳 Docker Deployment - Quick Start
+# Docker Deployment - Quick Start
 
 ## One-Command Deployment
 
@@ -20,12 +20,12 @@ That's it! Your application will be running at **http://localhost:8000**
 
 ## What Happens Automatically
 
-1. ✅ Checks Docker installation
-2. ✅ Builds Docker image (~5-10 minutes first time)
-3. ✅ Creates database with 8,436 customers
-4. ✅ Loads trained ML model
-5. ✅ Starts web application
-6. ✅ Initializes all API endpoints
+1. Checks Docker installation
+2. Builds Docker image (~5-10 minutes first time)
+3. Creates database with 8,436 customers
+4. Loads trained ML model
+5. Starts web application
+6. Initializes all API endpoints
 
 ---
 
@@ -217,14 +217,14 @@ curl http://localhost:8000/api/dashboard/metrics
 
 ## What's Included
 
-- ✅ FastAPI backend
-- ✅ SQLite database (8,436 customers)
-- ✅ Trained ML model (EasyEnsembleClassifier)
-- ✅ Interactive web dashboard (7 pages)
-- ✅ 15+ API endpoints
-- ✅ Automatic database initialization
-- ✅ Health checks
-- ✅ Logging
+- FastAPI backend
+- SQLite database (8,436 customers)
+- Trained ML model (EasyEnsembleClassifier)
+- Interactive web dashboard (7 pages)
+- 15+ API endpoints
+- Automatic database initialization
+- Health checks
+- Logging
 
 ---
 
@@ -321,12 +321,12 @@ curl -v http://localhost:8000/api/dashboard/metrics
 
 ## Next Steps
 
-1. ✅ Deploy with `./deploy.sh` or `deploy.bat`
-2. ✅ Access http://localhost:8000
-3. ✅ Explore the 7 dashboard pages
-4. ✅ Test bulk prediction with CSV upload
-5. ✅ Review API documentation at /docs
-6. ✅ Check model evaluation metrics
+1. Deploy with `./deploy.sh` or `deploy.bat`
+2. Access http://localhost:8000
+3. Explore the 7 dashboard pages
+4. Test bulk prediction with CSV upload
+5. Review API documentation at /docs
+6. Check model evaluation metrics
 
 ---
 
@@ -344,10 +344,10 @@ curl -v http://localhost:8000/api/dashboard/metrics
 
 **Author**: Adeline Makokha  
 **Adm No**: 191199  
-**Course**: DSA 8502 Predictive and Optimization Analytics
+**Course**: Dissertation
 
 ---
 
-## 🎉 Ready to Deploy!
+## Ready to Deploy!
 
 Run `./deploy.sh` (Linux/Mac) or `deploy.bat` (Windows) and you're done!
