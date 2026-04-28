@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-## 🚀 Get Started in 3 Steps
+##  Get Started in 3 Steps
 
 ### Step 1: Setup
 ```bash
@@ -34,7 +34,7 @@ http://localhost:8000
 2. Upload in the **Batch Prediction** section
 3. Download results
 
-## 📊 Dashboard Sections
+##  Dashboard Sections
 
 ### 1. Executive Dashboard
 - View overall churn metrics
@@ -56,7 +56,7 @@ http://localhost:8000
 - Historical trends
 - Drift detection status
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Port Already in Use
 ```bash
@@ -79,7 +79,7 @@ cp path/to/your/best_model.pkl deployment/models/
 pip install -r requirements.txt --upgrade
 ```
 
-## 📝 API Testing
+##  API Testing
 
 ### Using cURL
 ```bash
@@ -126,7 +126,7 @@ response = requests.post(
 print(response.json())
 ```
 
-## 🎯 Next Steps
+##  Next Steps
 
 1. **Customize**: Update model path and feature names in `predictor.py`
 2. **Database**: Connect to your database for real customer data
@@ -134,17 +134,17 @@ print(response.json())
 4. **Deploy**: Use Docker or cloud platform for deployment
 5. **Monitor**: Set up logging and alerting
 
-## 💡 Tips
+##  Tips
 
 - Use filters in Risk Analysis to focus on specific segments
 - Download batch results for offline analysis
 - Monitor model performance regularly
 - Update retention actions to track campaign effectiveness
 
-## 📞 Need Help?
+##  Need Help?
 
 - Check the full README.md for detailed documentation
 - Review API docs at http://localhost:8000/docs
 - Check logs for error messages
 
-Happy Predicting! 
+
