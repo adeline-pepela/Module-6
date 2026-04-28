@@ -1,4 +1,4 @@
-# 🏗️ System Architecture
+# System Architecture
 
 ## High-Level Architecture
 
@@ -283,5 +283,5 @@ Application
 ---
 
 **Architecture Version**: 1.0.0  
-**Last Updated**: 2024-01-15  
-**Maintained By**: Development Team
+**Last Updated**: 2026-01-15  
+**Maintained By**: Adeline Makokha
