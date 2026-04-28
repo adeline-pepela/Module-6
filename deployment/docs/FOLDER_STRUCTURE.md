@@ -1,10 +1,10 @@
-# ✅ Deployment Folder - Organized Structure
+# Deployment Folder - Organized Structure
 
 ## Final Structure (Production Ready)
 
 ```
 deployment/
-├── 📁 backend/                 # Application backend
+├── backend/                 # Application backend
 │   ├── app/
 │   │   ├── api/               # REST API endpoints
 │   │   ├── database/          # Database models & scripts
@@ -13,21 +13,21 @@ deployment/
 │   ├── main.py                # FastAPI entry point
 │   └── churn_prediction.db    # SQLite database (3.6MB)
 │
-├── 📁 frontend/                # Web interface
+├── frontend/                # Web interface
 │   ├── static/
 │   │   ├── css/               # Stylesheets
 │   │   └── js/                # JavaScript
 │   └── templates/
 │       └── index.html         # Dashboard HTML
 │
-├── 📁 models/                  # Machine learning models
+├── models/                  # Machine learning models
 │   └── best_model.pkl         # Trained model (896KB)
 │
-├── 📁 data/                    # Sample data
+├── data/                    # Sample data
 │   └── sample_batch.csv       # Example CSV for bulk prediction
 │
-├── 📁 docs/                    # All documentation
-│   ├── DOCKER_README.md       # ⭐ Docker quick start
+├── docs/                    # All documentation
+│   ├── DOCKER_README.md       # Docker quick start
 │   ├── DOCKER_GUIDE.md        # Comprehensive Docker guide
 │   ├── DEPLOYMENT_GUIDE.md    # Detailed deployment
 │   ├── BULK_PREDICTION_FORMAT.md  # CSV format spec
@@ -39,28 +39,28 @@ deployment/
 │   ├── QUICKSTART.md          # Quick reference
 │   └── CHECKLIST.md           # Deployment checklist
 │
-├── 📁 scripts/                 # Deployment & utility scripts
-│   ├── deploy.sh              # ⭐ Linux/Mac one-command deploy
-│   ├── deploy.bat             # ⭐ Windows one-command deploy
+├── scripts/                 # Deployment & utility scripts
+│   ├── deploy.sh              # Linux/Mac one-command deploy
+│   ├── deploy.bat             # Windows one-command deploy
 │   ├── test-docker.sh         # Docker validation
 │   ├── create_sample_csv.py   # Generate sample CSV
 │   ├── setup_database.py      # Database initialization
 │   ├── setup_database.sh      # Database setup script
 │   └── start.sh               # Manual start script
 │
-├── 📄 Dockerfile               # Docker container definition
-├── 📄 docker-compose.yml       # Docker orchestration
-├── 📄 docker-entrypoint.sh     # Container initialization
-├── 📄 .dockerignore           # Docker build exclusions
-├── 📄 requirements.txt        # Python dependencies
-├── 📄 .env.example            # Environment template
-├── 📄 bulk_prediction_template.csv  # ⭐ Sample CSV (10 real customers)
-└── 📄 README.md               # ⭐ Main deployment guide
+├── Dockerfile               # Docker container definition
+├── docker-compose.yml       # Docker orchestration
+├── docker-entrypoint.sh     # Container initialization
+├── .dockerignore           # Docker build exclusions
+├── requirements.txt        # Python dependencies
+├── .env.example            # Environment template
+├── bulk_prediction_template.csv  #  Sample CSV (10 real customers)
+└── README.md               #  Main deployment guide
 ```
 
 ---
 
-## 🎯 Key Files for Users
+## Key Files for Users
 
 ### For Quick Deployment
 1. **scripts/deploy.sh** (Linux/Mac) or **scripts/deploy.bat** (Windows)
@@ -78,9 +78,9 @@ deployment/
 
 ---
 
-## 📊 Organization Benefits
+## Organization Benefits
 
-### ✅ Clear Separation
+###  Clear Separation
 - **backend/** - All server code
 - **frontend/** - All UI code
 - **models/** - ML models only
@@ -88,13 +88,13 @@ deployment/
 - **docs/** - All documentation
 - **scripts/** - All executable scripts
 
-### ✅ Easy Navigation
+### Easy Navigation
 - Root level has only essential files
 - Documentation grouped in docs/
 - Scripts grouped in scripts/
 - No clutter
 
-### ✅ Professional Structure
+### Professional Structure
 - Industry-standard layout
 - Easy to understand
 - Scalable
@@ -102,7 +102,7 @@ deployment/
 
 ---
 
-## 🚀 Quick Start Paths
+## Quick Start Paths
 
 ### Absolute Beginner
 ```
@@ -132,7 +132,7 @@ deployment/
 
 ---
 
-## 📝 File Counts
+## File Counts
 
 - **Documentation**: 11 files in docs/
 - **Scripts**: 7 files in scripts/
@@ -143,30 +143,30 @@ deployment/
 
 ---
 
-## ✅ Verification
+## Verification
 
 After organization:
-- ✅ All docs in docs/
-- ✅ All scripts in scripts/
-- ✅ Root level clean
-- ✅ Easy to navigate
-- ✅ Professional structure
-- ✅ Deployment tested and working
+-  All docs in docs/
+-  All scripts in scripts/
+-  Root level clean
+-  Easy to navigate
+-  Professional structure
+-  Deployment tested and working
 
 ---
 
-## 🎓 For Dissertation
+##  For Dissertation
 
 This structure demonstrates:
-- ✅ Professional software engineering
-- ✅ Clear organization
-- ✅ Easy maintenance
-- ✅ Scalable architecture
-- ✅ Industry best practices
-- ✅ User-friendly layout
+-  Professional software engineering
+-  Clear organization
+-  Easy maintenance
+-  Scalable architecture
+-  Industry best practices
+-  User-friendly layout
 
 ---
 
 **Organized By**: Adeline Makokha  
-**Date**: March 9, 2024  
+**Date**: April 28, 2026  
 **Status**: Production Ready
