@@ -25,10 +25,10 @@ async def get_dashboard_metrics(db: Session = Depends(get_db)):
     churned = db.query(Customer).filter(Customer.churn == 'Yes').count()
     churn_rate = (churned / total_customers) if total_customers > 0 else 0
     
-    at_risk = db.query(Prediction).filter(Prediction.churn_probability >= 0.6).count()
+    at_risk = db.query(Prediction).filter(Prediction.churn_probability >= 0.4).count()
     revenue_at_risk = db.query(func.sum(Customer.total_revenue)).join(
         Prediction, Customer.pid == Prediction.pid
-    ).filter(Prediction.churn_probability >= 0.6).scalar() or 0
+    ).filter(Prediction.churn_probability >= 0.4).scalar() or 0
     
     metrics = db.query(ModelMetrics).filter(ModelMetrics.is_active == True).first()
     
