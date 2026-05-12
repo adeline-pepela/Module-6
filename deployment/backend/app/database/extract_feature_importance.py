@@ -1,5 +1,5 @@
 """
-Add this cell to your modeling_3.ipynb notebook after training your best_model
+Add this cell to your customer_churn.ipynb notebook after training your best_model
 This will extract feature importance and save it to the database
 """
 

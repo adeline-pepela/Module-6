@@ -18,7 +18,7 @@ def save_model_metrics():
     # Clear existing comparisons
     db.query(ModelComparison).delete()
     
-    # Model metrics from your research
+    # Model metrics from  research
     models = [
         {
             'model_name': 'EasyEnsembleClassifier',

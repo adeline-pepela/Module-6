@@ -43,7 +43,7 @@ class ChurnPredictor:
     
     def _get_feature_names(self) -> List[str]:
         """Get feature names used in training"""
-        # Match your actual training features
+        # Match actual training features
         categorical = ['CRM_PID_Value_Segment', 'EffectiveSegment', 'KA_name']
         numerical = [
             'Billing_ZIP', 'Active_subscribers', 'Not_Active_subscribers', 'Suspended_subscribers',
@@ -69,7 +69,7 @@ class ChurnPredictor:
         # Create DataFrame with expected features
         df = pd.DataFrame([customer_data])
         
-        # Feature engineering (match your training pipeline)
+        # Feature engineering ( training pipeline)
         df['Active_Rate'] = df['Active subscribers'] / (df['Total Subscribers'] + 1)
         df['Suspended_Rate'] = df['Suspended subscribers'] / (df['Total Subscribers'] + 1)
         df['Revenue_Ratio'] = df['Average Mobile Revenue'] / (df['Average Fix Revenue'] + 1)

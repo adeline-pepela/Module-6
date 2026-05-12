@@ -18,7 +18,7 @@ def save_feature_importance():
     # Clear existing
     db.query(FeatureImportance).filter(FeatureImportance.model_version == 'v1.0').delete()
     
-    # Your 22 features with REAL importance scores from permutation_importance
+    # 22 features with REAL importance scores from permutation_importance
     features = [
         ('Active_Rate', 0.014311),
         ('Not_Active_subscribers', 0.009344),
