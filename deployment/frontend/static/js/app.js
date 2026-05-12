@@ -1,5 +1,11 @@
 const API = '/api';
 
+function formatKES(value) {
+    if (value >= 1000000) return (value / 1000000).toFixed(2) + 'M';
+    if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
+    return value.toFixed(0);
+}
+
 // Navigation
 document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', (e) => {
@@ -56,7 +62,7 @@ async function loadOverview() {
         document.getElementById('kpi-total').textContent = m.total_customers.toLocaleString();
         document.getElementById('kpi-churn').textContent = (m.current_churn_rate * 100).toFixed(1) + '%';
         document.getElementById('kpi-risk').textContent = m.predicted_at_risk.toLocaleString();
-        document.getElementById('kpi-revenue').textContent = 'KES ' + (m.revenue_at_risk / 1000000).toFixed(1) + 'M';
+        document.getElementById('kpi-revenue').textContent = 'KES ' + formatKES(m.revenue_at_risk);
         document.getElementById('kpi-prevention').textContent = (m.prevention_rate * 100).toFixed(1) + '%';
         document.getElementById('kpi-efficiency').textContent = (m.campaign_efficiency * 100).toFixed(1) + '%';
         
